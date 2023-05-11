@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col bg-danger bg-gradient">
+        <h1 class="text-center">Génial Blog</h1>
+        <p class="text-center">Ajoutez un article ou un brouillon ! </p>
+        <div class="mb-3">
+            <label class="form-label">Titre Article</label>
+            <!-- <input [(ngModel)]="newArticleTitle" type="text" class="form-control"> -->
+            <!-- On va passer par une local ref pour récup ce qui est tapé dans l'input -->
+            <input #articleTitleRef type="text" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Contenu Article</label>
+            <!-- <textarea [(ngModel)]="newArticleContent" class="form-control" rows="3"></textarea> -->
+            <!-- On va y acceder avec viewChild -->
+            <textarea #articleContentInput class="form-control" rows="3"></textarea>
+          </div>
+          <div class="mb-3">
+            <!-- <button (click)="onAddArticle()" class="btn btn-dark me-1" >Ajouter Article</button> -->
+            <!-- on passe la ref en paramètre de notre fonction -->
+            <button (click)="onAddArticle(articleTitleRef, articleContentInput)" class="btn btn-dark me-1" >Ajouter Article</button>
+            <button (click)="onAddBrouillon(articleTitleRef,articleContentInput)" class="btn btn-outline-dark" >Ajouter Brouillon</button>                
+          </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="container-fluid bg-app p-1">
+  <div class="row">
+    <div class="col">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/">Home</a> <!--Equivalent du router-link en vue-->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/albums">Albums</a> <!--Equivalent du router-link en vue-->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/users">Users</a> <!--Equivalent du router-link en vue-->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/api">API</a> <!--Equivalent du router-link en vue-->
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <router-outlet></router-outlet> <!--Equivalent du router-view en vue-->
+    </div>
+  </div>
+
